@@ -2,13 +2,13 @@
 
 ---
 
-- Write your CSS from within your JS
+- Write your CSS from within your JS IN SCSS!
 - Every styled element gets its own component
 
 ---
 
 ```jsx
-import styled from 'styled-components';
+import styled from 'styled-components'; //styled-component is always declared when it will be a styled component
 
 const Button = styled.button`
   background: blueviolet;
@@ -97,10 +97,12 @@ Convert the following inline styles to styled-components
   height: 300px;
 }
 
+
 ```
 
 
 ```jsx
+
 function App(props) {
   return (
     <div className="wrapper">
@@ -108,6 +110,23 @@ function App(props) {
     </div>
   )
 }
+
+// import styled from 'styled-components';
+
+// const StyledWrapper = styled.div`
+//   margin: 0 auto;
+//   height: 300px;
+// `;
+
+// function App(props) {
+//   return (
+//     <StyledWrapper>
+//       Hello World
+//     </StyledWrapper>
+//   )
+// }
+
+
 ```
 
 ---
@@ -143,6 +162,34 @@ function IconButton(props) {
     </button>
   )
 }
+
+// import styled from 'styled-components';
+
+// const another = styled.button`
+//   color: tomato;
+//   font-weight: bold;
+//   padding: 20px;
+
+//   &:hover, &:focus {
+//     transform: translateY(-3px);
+//   }
+
+//   i {
+//     width: 32px;
+//     height: 32px;
+//   }
+// `;
+
+// function IconButton(props) {
+//   return (
+//     <another>
+//       <i>
+//         {props.icon}
+//       </i>
+//       {props.children}
+//     </another>
+//   )
+// }
 ```
 
 ---

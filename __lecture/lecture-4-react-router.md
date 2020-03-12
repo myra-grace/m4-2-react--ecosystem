@@ -9,7 +9,7 @@ Modern JS apps use "client-side routing".
 All routes are defined in the React application.
 
 ```jsx
-import {Route} from 'react-router-dom';
+import {Route} from 'react-router-dom'; 
 
 <Route path="/about">
   <About />
