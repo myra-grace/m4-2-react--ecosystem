@@ -12,6 +12,17 @@ in SomeComponent (at src/index.js:24)
 in App (at src/index.js:31)
 ```
 
+const items = [
+  {text: 'Item 1'}
+  {text: 'Item '}
+]
+
+const Bacon = ({items}) => (
+  {items.mapp(item => <li key={`id${item .text.replace(' ', '-')`}}>{item.text}
+  <li>)}
+  );
+)
+
 ---
 
 ### 🏠Housekeeping: Modules
@@ -59,12 +70,12 @@ import { logIn, logOut } from '../../authentication-utils.js';
 
 Are the following code snippets correct or incorrect?
 
-Fix them, if incorrect
+Fix them, if incorrect 
 
 ---
 
 ```js
-// src/data.js
+// src/data.js (IT IS CORRECT!)
 const data = { hi: 5 };
 
 export default data;
@@ -84,7 +95,9 @@ export const MAGIC_NUMBER = 123;
 
 ```js
 // src/index.js
-import MAGIC_NUMBER from './data';
+import {MAGIC_NUMBER} from './data';
+
+//OR MAGIC_NUMBER.MAGIC_NUMBER instead of {}
 ```
 
 ---
@@ -94,6 +107,9 @@ import MAGIC_NUMBER from './data';
 export const users = [];
 export const sessions = [];
 
+// const users = [];
+// const sessions = [];
+
 const data = { users, sessions };
 
 export default data;
@@ -102,6 +118,15 @@ export default data;
 ```js
 // src/index.js
 import {data, users} from './data';
+//import {users} from './data';
+
+//OR (BETTER)
+export const users = [];
+export const sessions = [];
+
+import {users} from './data';
+import {sessions} from './data';
+
 ```
 
 ---
@@ -109,12 +134,15 @@ import {data, users} from './data';
 ```js
 // src/data.js
 export default const baseball = '⚾️';
+//export default '⚾️';
+
 
 ```
 
 ```js
 // src/index.js
 import baseball from './data';
+// not baseball cause was called that but cause default can be called whatever when imported
 ```
 
 ---
